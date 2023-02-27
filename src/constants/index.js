@@ -1,10 +1,12 @@
+import { addDays } from "date-fns";
+
 export const DATA = [
 	{
 		id: 1,
 		category: "Gastronomia",
 		title: "Las 7 chocolaterías mas famosas de Bariloche",
 		location: "Bariloche, Río Negro",
-		date: "23 de febrero",
+		date: new Date(),
 		tags: ["Cafetería", "Casa de té"],
 		imageName: "choco",
 	},
@@ -13,7 +15,7 @@ export const DATA = [
 		category: "Aventura",
 		title: "Recomendaciones para la excursión Cruce de los Andres",
 		location: "San Martín, Neuquén",
-		date: "18 de febrero",
+		date: addDays(new Date(), 7),
 		tags: ["Cabalgata"],
 		imageName: "excursion",
 	},
@@ -22,7 +24,7 @@ export const DATA = [
 		category: "Fotografía",
 		title: "Puntos panorámicos infaltables en la ruta de los 7 Lagos",
 		location: "Villa la Angostura, Neuquén",
-		date: "18 de febrero",
+		date: addDays(new Date(), 14),
 		tags: ["Lagos", "Miradores", "7 Lagos"],
 		imageName: "panoramic",
 	},

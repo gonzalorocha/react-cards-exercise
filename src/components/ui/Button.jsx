@@ -6,7 +6,7 @@ const Button = ({ text, onClick, className }) => {
 		<button
 			onClick={onClick}
 			className={cn(
-				"bg-blue-700 lowercase text-white w-32 h-11 rounded-3xl justify-center items-center text-sm font-semibold flex flex-row gap-2",
+				"bg-blue-700 text-white w-32 h-11 rounded-3xl  justify-center items-center text-sm font-semibold flex flex-row gap-2 uppercase",
 				className
 			)}
 		>
