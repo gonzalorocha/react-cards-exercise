@@ -3,12 +3,7 @@
 		"module": "commonjs",
 		"target": "es6",
 		"moduleResolution": "node",
-		"baseUrl": "./src",
-		"paths": {
-			"@assets/*": ["assets/*"],
-			"@components/*": ["components/*"],
-			"@pages/*": ["pages/*"]
-		}
+		"baseUrl": "./src"
 	},
 	"exclude": ["node_modules"]
 }
