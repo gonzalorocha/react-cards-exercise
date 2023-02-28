@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Icon from "./ui/Icon";
 import Tag from "./ui/Tag";
 import Date from "./ui/Date";
@@ -6,21 +7,28 @@ import Date from "./ui/Date";
 const CardContent = ({ location, date, tags = [] }) => {
 	return (
 		<div>
-			<p className="flex flex-row gap-2 text-gray-500 text-sm">
+			<div className="flex flex-row gap-2 text-gray-500 text-md">
 				<Icon name="Location" />
 				{location}
-			</p>
-			<p className="flex flex-row gap-2 text-gray-500 text-sm mt-3">
+			</div>
+			<div className="flex flex-row gap-2 text-gray-500 text-md mt-3">
 				<Icon name="Calendar" />
 				<Date date={date} />
-			</p>
+			</div>
 			<div className="flex flex-row gap-1 mt-3">
 				{tags.map((tag) => (
-					<Tag name={tag} />
+					<Tag key={tag} name={tag} />
 				))}
 			</div>
 		</div>
 	);
+};
+
+CardContent.propTypes = {
+	location: PropTypes.string.isRequired,
+	date: [PropTypes.string, PropTypes.number, PropTypes.instanceOf(Date)]
+		.isRequired,
+	tags: PropTypes.array,
 };
 
 export default CardContent;

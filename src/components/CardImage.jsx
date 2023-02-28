@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import choco from "assets/choco.png";
 import excursion from "assets/excursion.png";
 import panoramic from "assets/panoramic.png";
@@ -10,7 +11,6 @@ const CardImage = ({ imageName }) => {
 				return <img src={choco} alt=""></img>;
 			case "excursion":
 				return <img src={excursion} alt=""></img>;
-
 			default:
 				return <img src={panoramic} alt=""></img>;
 		}
@@ -20,6 +20,10 @@ const CardImage = ({ imageName }) => {
 			{image()}
 		</div>
 	);
+};
+
+CardImage.propTypes = {
+	imageName: PropTypes.string.isRequired,
 };
 
 export default CardImage;
